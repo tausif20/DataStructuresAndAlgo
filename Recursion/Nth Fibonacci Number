@@ -1,0 +1,32 @@
+/*
+Problem Statement
+Nth term of Fibonacci series F(n), where F(n) is a function, is calculated using the following formula -
+    F(n) = F(n-1) + F(n-2), 
+    Where, F(1) = F(2) = 1
+    */
+import java.util.*;
+public class Solution {
+    
+    public static int fib(int n){
+        if(n==1)
+            return 1;
+        if(n ==2)
+            return 1;
+        int faith1 = fib(n-1);
+        int faith2 = fib(n-2);
+        return faith1+faith2;
+    }
+
+	public static void main(String[] args) {
+		
+		/* Your class should be named Solution.
+	 	* Read input as specified in the question.
+	 	* Print output as specified in the question.
+		*/
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        System.out.println(fib(n));
+		
+	}
+
+}
