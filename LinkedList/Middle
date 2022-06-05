@@ -1,0 +1,31 @@
+public class Middle {
+
+    public static Node middle(Node head){
+        if(head == null){
+            return head;
+        }
+        Node current = head;
+        int count =1;
+        while(current != null){
+            count++;
+            current = current.next;
+        }
+        int middle = (count/2)+1;  // farther
+        while(head != null){
+            if(middle == count){
+                return head;
+            }
+            head = head.next;
+            count--;
+        }
+        return head;
+    }
+    public static void main(String[] args) {
+        Node head = new Node(1); // HEAD NODE
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = new Node(4);
+        head = middle(head);
+        System.out.println(head.data);
+    }
+}
