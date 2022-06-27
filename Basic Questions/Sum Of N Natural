@@ -1,0 +1,9 @@
+package Basic;
+
+public class SumOfNaturalNumber {
+    public static void main(String[] args) {
+        int ans,n=5;
+        ans = n*(n+1)/2;
+        System.out.println(ans);
+    }
+}
